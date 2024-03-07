@@ -97,24 +97,24 @@ function submitForm() {
         birthday: document.getElementById("birthday").value
     };
 
-    // Send data to server for processing and CSV generation
-    fetch('', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-    })
-    .then(response => response.blob())
-    .then(blob => {
-        // Create a temporary anchor element to trigger the download
-        const url = window.URL.createObjectURL(new Blob([blob]));
-        const link = document.createElement('a');
-        link.href = url;
-        link.setAttribute('download', 'form_data.csv');
-        document.body.appendChild(link);
-        link.click();
-        link.parentNode.removeChild(link);
-    })
-    .catch(error => console.error('Error:', error));
+    // // Send data to server for processing and CSV generation
+    // fetch('', {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-Type': 'application/json'
+    //     },
+    //     body: JSON.stringify(formData)
+    // })
+    // .then(response => response.blob())
+    // .then(blob => {
+    //     // Create a temporary anchor element to trigger the download
+    //     const url = window.URL.createObjectURL(new Blob([blob]));
+    //     const link = document.createElement('a');
+    //     link.href = url;
+    //     link.setAttribute('download', 'form_data.csv');
+    //     document.body.appendChild(link);
+    //     link.click();
+    //     link.parentNode.removeChild(link);
+    // })
+    // .catch(error => console.error('Error:', error));
 }
