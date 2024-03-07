@@ -1,0 +1,59 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForHearts Worldwide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="welcome-container">
+        <h1 id="welcome-text">We're grateful for your commitment to our cause</h1>
+    </div>
+
+    <div class="form-container">
+        <h1>Information Collection</h1>
+        <form id="informationForm">
+            <!-- Personal Information -->
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="company">Company:</label>
+            <input type="text" id="company" name="company">
+
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title">
+
+            <label for="cellPhone">Cell Phone:</label>
+            <input type="tel" id="cellPhone" name="cellPhone">
+
+            <label for="mailingAddress">Mailing Address:</label>
+            <textarea id="mailingAddress" name="mailingAddress"></textarea>
+
+            <!-- Additional Information -->
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="birthday">Date of Birth:</label>
+            <input type="date" id="birthday" name="birthday">
+
+            <!-- Submit Button -->
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
